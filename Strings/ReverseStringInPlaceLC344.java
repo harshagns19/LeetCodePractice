@@ -22,5 +22,16 @@ public class ReverseStringInPlaceLC344 {
         }
         System.out.println("inplace is "+String.valueOf(s));
 
+        //in place variation more efficient
+        char[] reverse = {'t','e','s','t','i','n','g','s'};
+        int left = 0, right = reverse.length - 1;
+        while (left < right) {
+            char tmp = reverse[left];
+            reverse[left] = reverse[right];
+            reverse[right] = tmp;
+            left++;
+            right--;
+        }
+        System.out.println("inplace is "+String.valueOf(reverse));
     }
 }
